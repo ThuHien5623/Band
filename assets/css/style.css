@@ -1,0 +1,218 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif; /* có tính kế thừa*/
+}
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+
+*/
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng (Kiểu chữ, hình tròn, vuong,... */
+.clear {
+    clear: both;
+}
+
+#main {
+
+}
+
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* thiết lập thứ tự xếp chồng lên nhau */
+    z-index: 1;
+}
+/* Tạo khối cho ul ngắn lại k kéo dài hết chiều ngang của trang */
+/* Ul có tính kế thừa block */
+
+#nav {
+    display: inline-block;
+}
+#nav, .subnav {
+    /* Xoa dau cham */
+    list-style-type: none; 
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+#nav > li > a {
+    color: #fff;
+    /* chu hoa thanh chu thuong */
+    text-transform: uppercase;
+}
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+#nav li:hover .subnav {
+    display:  block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav {
+    /* Ẩn đi */
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    /* Tạo độ bóng cho box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+#header .search-btn {
+    /* Chuyển phần tử sang góc phải */
+    float: right;
+    padding: 0 24px;
+}
+#header .search-icon {
+    font-size: 15px;
+    color: #fff;
+    line-height: 46px;
+}
+#header .search-btn:hover {
+    background-color: #f44336;   
+    /* Thay đổi hình dạng con trỏ chuột */ 
+    cursor: pointer;
+}
+
+
+
+
+#slider {
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url('/w3_Band/img/slider/slider1.jpg') top center / cover no-repeat;
+    /* background-image: url('/w3_Band/img/slider/slider1.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+#slider {
+    position: relative;
+}
+#slider .text-content {
+    position: absolute;
+    bottom: 32px;
+    /* left: 50%;
+    transform: translateX(-50%);
+    text-align: center; */
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+#slider .text-heading {
+    font-weight: 500px;
+    font-size: 24px;
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+
+
+
+#content {
+
+}
+
+
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font: 30px "Segoe UI", Arial, sans-serif;
+    text-align: center;
+    /* Làm chữ đậm hơn */
+    font-weight: 470;
+    /* Dãn cách chữ */
+    letter-spacing: 4px;
+}
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    /* khoảng cách dòng */
+    margin-top: 25px;
+    /* Chữ nghiêng */
+    font-style: italic;
+    /* làm mờ */
+    opacity: 0.6;
+}
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    /* Căn đều */
+    text-align: justify;   
+    /* Căn chỉnh độ cao của một dòng */
+    line-height: 1.4; 
+}
+
+#content .member-list {
+    margin-top: 48px;
+}
+#content .member-item {
+    /* display: inline-block; */
+    /* Hoặc */
+    float: left;
+    /* width: 33.33333%; */
+    width: calc(100%/3);
+    text-align: center;
+}
+#content .member-name {
+    font-size: 15px;
+}
+#content .member-img {
+    width: 154px;
+    margin-top: 15px;
+    /* Bo góc ảnh */
+    border-radius: 4px;
+}
+
+/* Tour section */
+.tour-section {
+    background-color: #000 !important;
+}
+
+
+
+
+/* Footer section */
+#footer {
+
+}
